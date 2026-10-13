@@ -22,32 +22,33 @@ const Main = () => {
     });
   }, []);
 
-  
   const handleCustomerChange = (event) => {
-      setCustomer(event.target.value);
-  }
+    setCustomer(event.target.value);
+  };
 
   const handleTimeChange = (event) => {
     setTime(event.target.value);
-  }
+  };
 
   const handleServiceChange = (event) => {
     setService(event.target.value);
-  }
+  };
 
   return html`
     <div>
       <h1>Smart Scheduler</h1>
       Create and manage customer scheduling requests.
-      <hr /> 
-      <${CustomerForm} 
-        customers=${customers} 
-        time=${time} 
-        service=${service} 
+
+      <hr />
+
+      <${CustomerForm}
+        customers=${customers}
+        time=${time}
+        service=${service}
         onCustomerChange=${handleCustomerChange}
         onTimeChange=${handleTimeChange}
         onServiceChange=${handleServiceChange}
-        />
+      />
 
       <${MainList} existingCustomers=${existingCustomers} />
     </div>
