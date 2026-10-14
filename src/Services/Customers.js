@@ -40,7 +40,7 @@ export const createCustomer = (
 
 export const getAllCustomers = () => {
   return axios
-    .get("./Services/Customers.json")
+    .get("src/Services/Customers.json")
     .then((response) => {
       const customers = response.data;
 

@@ -6,7 +6,7 @@ import {
 import { getAllCustomers } from "../../Services/Customers.js";
 
 import MainList from "./MainList.js";
-import CustomerForm from "./CustomerForm/CustomerForm.js";
+import CustomerForm from "../CustomerForm/CustomerForm.js";
 
 const Main = () => {
   //es6 syntax arrow function () => {} same thing as function() {}
