@@ -1,8 +1,7 @@
 const axios = window.axios;
-
 const url =
   "https://my-json-server.typicode.com/kellybuchanan/WebDev-Spring2021";
-
+  
 // would like to get existing customers from the CRM
 // using dummy data for now
 
@@ -38,17 +37,8 @@ export const createCustomer = (
     });
 };
 
+import customers from "./Customers.json";
+
 export const getAllCustomers = () => {
-  return axios
-    .get("src/Services/Customers.json")
-    .then((response) => {
-      const customers = response.data;
-
-      console.log(customers);
-
-      return customers;
-    })
-    .catch((err) => {
-      console.log("GET Error: ", err);
-    });
+    return Promise.resolve(customers);
 };

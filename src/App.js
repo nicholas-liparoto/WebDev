@@ -1,11 +1,6 @@
-import {
-  html,
-  render,
-} from "https://unpkg.com/htm/preact/standalone.module.js";
-import Main from "./Components/Main/Main.js";
+import "./styles.css";
+import Components from "./Components/Components.js";
 
-function App() {
-  return html`<${Main} />`;
+export default function App() {
+  return <Components />;
 }
-
-render(html` <${App} /> `, document.getElementById("app"));
