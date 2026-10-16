@@ -12,6 +12,9 @@ LANDSCAPE-2
 Changed
 Fixed
 
+[0.3.0] - 2026-10-16
+Added Parse models (Customer, Service) and connected the form and home page to Parse.
+
 [0.2.0] - 2026-10-16
 Added routing and parsing.
 

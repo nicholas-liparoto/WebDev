@@ -6,8 +6,9 @@ const MainList = ({ existingCustomers }) => {
       <ul>
         {existingCustomers.map((customer) => (
           <li key={customer.id}>
-            {customer.email} | {customer.firstName}{" "}
-            {customer.lastName} | {customer.service}
+            {customer.get("email")} | {customer.get("firstName")}{" "}
+            {customer.get("lastName")} | {customer.get("service")?.get("name")} |{" "}
+            {customer.get("preference")}
           </li>
         ))}
       </ul>

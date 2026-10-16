@@ -1,18 +1,23 @@
-import { 
-    useState, 
-    useEffect 
+import {
+    useState,
+    useEffect
 } from "react";
 
 import MainList from "./MainList";
-import { getAllCustomers } from "../../Services/Customers";
+import { getAllCustomers } from "../../Services/CustomerModel";
 
 export default function Home() {
     const [existingCustomers, setExistingCustomers] = useState([]);
 
+    // load customers from Parse
     useEffect(() => {
-        getAllCustomers().then((existingCustomers) => {
-          setExistingCustomers(existingCustomers);
-        });
+        getAllCustomers()
+            .then((customers) => {
+                setExistingCustomers(customers);
+            })
+            .catch((error) => {
+                console.error("Could not load customers:", error);
+            });
     }, []);
 
     return (
@@ -21,6 +26,6 @@ export default function Home() {
             <h2>Here are the existing customers</h2>
             <MainList existingCustomers={existingCustomers} />
         </section>
-        
+
     );
 }
