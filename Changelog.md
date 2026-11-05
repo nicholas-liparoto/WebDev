@@ -18,3 +18,8 @@ Added routing and parsing.
 - Parse models (Customer, Service) with Customer pointing to Service
 - Form and home page load and save data with Parse
 
+[0.3.0] - 2026-11-05
+Added Auth and Protected Routes
+- Added Authentication (Register and Login and Logout)
+- Made Home and About pages Protected Routes
+
