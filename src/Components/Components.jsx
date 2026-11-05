@@ -7,6 +7,10 @@ import {
     Route,
     Navigate
 } from "react-router-dom";
+import AuthModule from "./Auth/Auth.js";
+import AuthRegister from "./Auth/AuthRegister";
+import AuthLogin from "./Auth/AuthLogin";
+import ProtectedRoute from "./ProtectedRoute/ProtectedRoute.js";
 
 
 export default function Components() {
