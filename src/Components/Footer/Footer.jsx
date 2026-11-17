@@ -13,7 +13,9 @@ const Footer = () => (
                 <li>
                     <Link to="/about">Add Customers</Link>
                 </li>
+                <li>
                     <Link to="/auth" onClick={logoutUser}>Logout</Link>
+                </li>
             </ul>
         </nav>
     </footer>
